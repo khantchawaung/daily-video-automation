@@ -1,0 +1,31 @@
+name: Daily Video Automation Workflow
+
+on:
+  schedule:
+    - cron: '0 1 * * *' # မြန်မာစံတော်ချိန် မနက် ၇:၃၀ တိုင်း အလိုအလျောက် ပတ်မောင်းမည်
+  workflow_dispatch: # လက်ဖြင့် စမ်းသပ်နှိပ်နိုင်ရန်
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install FFmpeg and Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          pip install -r requirements.txt
+
+      - name: Run Automation Script
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python main.py
