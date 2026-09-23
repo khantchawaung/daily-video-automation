@@ -108,8 +108,14 @@ def send_to_telegram():
         requests.post(url, files=files, data=data)
 
 if __name__ == "__main__":
-    YOUTUBE_CHANNEL = "https://www.youtube.com/@DhammaTalks/videos"
-    WEBSITE_URL = "https://www.dhammadownload.com"
+    YOUTUBE_CHANNEL = "https://www.youtube.com/@%E1%80%80%E1%80%BC%E1%80%AC%E1%80%94%E1%80%AE%E1%80%80%E1%80%94%E1%80%BA%E1%80%90%E1%80%9B%E1%80%AC%E1%80%B8%E1%80%90%E1%80%B1%E1%80%AC%E1%80%BA%E1%80%99%E1%80%BB%E1%80%AC%E1%80%B82/videos"
+    WEBSITE_URL = "https://www.dhammadownload.com/audioinmyanmar.htm"
+    YOUTUBE_CHANNEL = "https://www.youtube.com/@BuddhaDhammaRay/videos"
+    YOUTUBE_CHANNEL = "https://www.youtube.com/@DHAMMAChanthar-%E1%80%93%E1%80%99%E1%80%B9%E1%80%99%E1%80%81%E1%80%BB%E1%80%99%E1%80%BA%E1%80%B8%E1%80%9E%E1%80%AC"
+    YOUTUBE_CHANNEL = "https://www.youtube.com/@Dharmasofbuddha/videos"
+    YOUTUBE_CHANNEL = "https://www.youtube.com/@BuddhaOfficial1991/videos"
+    YOUTUBE_CHANNEL = "https://www.youtube.com/@dhammatayartaw2025"
+    YOUTUBE_CHANNEL = "https://www.youtube.com/@DhammaMyanmar666/videos"
 
     audio_success = False
 
